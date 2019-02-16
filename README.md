@@ -4,7 +4,7 @@
 A shell script that can batch process source code format. Currently it can delete trailing spaces, convert tab indents to 4 spaces indent, and convert end-of-line from windows style (CRLF) to unix style (LF).
 
 
-## useage
+## Usage
 Format a single file:
 
 ```
@@ -17,7 +17,7 @@ A folder:
 $ ./code_format.sh test/
 ```
 
-## supported formats
+## Supported formats
 When converting a directory, it only looks for the file format listed in format_list.conf, and all other formats will not be converted. You can modify format_list.conf to any you need to convert. Now like this:
 
 ```
