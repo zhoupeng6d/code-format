@@ -1,7 +1,7 @@
 # code-format
 ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-A shell script that can batch process source code format. Currently it can delete trailing spaces, convert tab indents to 4 spaces indent, and convert end-of-line from windows style (CRLF) to unix style (LF).
+A shell script that can batch process source code formats. Currently it can delete trailing spaces, convert tab indents to 4 spaces indent, and convert end-of-line from windows style (CRLF) to unix style (LF).
 
 
 ## Usage
@@ -34,7 +34,6 @@ proto
 mk
 sh
 py
-
 ```
 
 ## TODO
