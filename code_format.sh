@@ -9,12 +9,23 @@ format() {
     echo ${files} | xargs dos2unix
 
     for filename in ${files} ;do
+        if [ "$(uname)" == "Darwin" ] ;then
+            # Mac OS X
+            sed_cmd=gsed
+        elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] ;then
+            # GNU/Linux
+            sed_cmd=sed
+        else
+            echo "This operating system is not supported now"
+            exit
+        fi
+
         filename1=${filename}.tab
         echo "tab --> 4 space" ${filename}
-        sed 's/\t/    /g' ${filename} >${filename1}
+        ${sed_cmd} 's/\t/    /g' ${filename} >${filename1}
 
         echo "delete the space of end line" ${filename}
-        sed 's/[ \t]*$//g' ${filename1} >${filename}
+        ${sed_cmd} 's/[ \t]*$//g' ${filename1} >${filename}
 
         rm -f ${filename1}
     done
@@ -37,4 +48,3 @@ else
 fi
 
 exit
-

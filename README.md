@@ -3,6 +3,11 @@
 
 A shell script that can batch process source code formats. Currently it can delete trailing spaces, convert tab indents to 4 spaces indent, and convert end-of-line from windows style (CRLF) to unix style (LF).
 
+## For MacOS
+Install gnu-sed first.
+```shell
+brew install gnu-sed
+```
 
 ## Usage
 Format a single file:
@@ -37,4 +42,4 @@ py
 ```
 
 ## TODO
-Convert arbitrary file encoding to utf8.
+Convert arbitrary file encoding to UTF-8.
